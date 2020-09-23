@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUS APP</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        .data{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 500px;
+            width: 80%;
+            background-color: darkgrey;
+            margin-top: 50px;
+            margin-left: 10%;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        .form{
+            margin-top: 40px;
+        }
+
+        input{
+            height: 35px;
+            text-indent: 20px;
+        }
+
+        button{
+            height: 39px;
+            padding: 10px;
+        }
+        .table{
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th,td{
+            height: 40px;
+            text-align: center;
+            padding: 5px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+   
+    <div class="data">
+        <h1>Bus Management System</h1>
+
+        <div class="form">
+            <form onsubmit="addBus(event)"> 
+                <input type="text" required placeholder="Name" id="name"/>
+                <input type="text" required placeholder="Source" id="source"/>
+                <input type="text" required placeholder="Destination" id="destination"/>
+                <input type="number" required placeholder="Bus Number" id="number"/>
+                <input type="number" required placeholder="Passenger Capacity" id="capacity"/>
+                <button type="submit">Add Bus</button>
+            </form.> 
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="Search By Source" id="searchSource" onkeyup="searchBySource()"/>
+            <input type="text" placeholder="Search By Destination" id="searchDestination" onkeyup="searchByDestination()"/>
+        </div>
+
+        <table border="1" cellspacing="0" class="table">
+            <thead>
+                <tr>
+                    <th>Sr no</th>
+                    <th>Name</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Bus No</th>
+                    <th>Capacity</th>
+                </tr>
+            </thead>
+
+            <tbody id="tdata">
+                <tr>
+                    <td></td>
+                </tr>
+                
+            </tbody>
+
+        </table>
+
+
+
+
+
+
+
+    </div>
+
+
+    
+
+    <script src="ques2d6.js"></script>
+</body>
+</html>
